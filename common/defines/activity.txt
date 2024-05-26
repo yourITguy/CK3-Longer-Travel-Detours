@@ -1,0 +1,19 @@
+NActivity = {
+	# Number of days until a completed activity involving a player is destroyed, will be destroyed earlier if all players involved close the activity window, must be greater than or equal to MULTIPLAYER_EVENT_TIME_OUT
+	ACTIVITY_DESTROY_AFTER_COMPLETE_WAIT_DAYS = 90
+
+	MAX_PHASE_YEARS_ACTIVE = 1 # Maximum amount of years allowed in an active phase state until the phase gets invalidated
+	MAX_PHASE_YEARS_PASSIVE = 10 # Maximum amount of years allowed in passive phase state until the phase gets invalidated
+	MAX_PHASE_DELAY_DAYS = 90 # Max number of days to delay starting a phase by for not-required special guests (we delay forever for hosts and required special guests )
+
+	SPECIAL_BAR_SEGMENTS = { 0 25 50 75 100 } # Display segments for the activity special bar
+
+	INVITE_RESPOND_RATE = 4 # Every X days we will handle a portion of invited guests responding
+	INVITE_RESPOND_BATCH_SIZE = 0.25 # What % of invited guests should respond each day
+	INVITE_RESPOND_BATCH_MINIMUM = 25 # Minimum number of guests that respond each day, ensures we always have everyone respond before activity starts
+
+  # MODDER NOTE: Changed from 2.0 to the below value
+	MAX_ROUTE_DEVIATION_MULTIPLIER_DEFAULT = 300.0 # Default max route deviation - see _activity_type.info `max_route_deviation_mult`
+
+	PLAYER_ACTIVITY_INVITE_GRACE_TIME = 14 # Number of extra days a player invited to an activity is allowed arrive in (so players always have at least this nr of days to consider accepting an invite)
+}
